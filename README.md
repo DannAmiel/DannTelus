@@ -15,12 +15,13 @@ A step-by-step series of examples that tell you how to get a development environ
    ```bash
     git clone git@github.com:DannAmiel/DannTelus.git
     cd your-repository-name
-
+    ```
 
 2. **Install Cypress via npm:Run the following command in your project root directory:
   ```bash
-    npm install cypress --save-dev
-
+    npm install cypress --save-dev 
+  ```
 3. **Open Cypress Test Runner:You can open the Cypress Test Runner with the following command:
   ```bash
     npx cypress open
+  ```
