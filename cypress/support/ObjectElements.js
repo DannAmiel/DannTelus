@@ -8,6 +8,10 @@ const ObjectElement = {
     EmailError: '.sui-c-input-error',
     EmailErrorMess: '.sui-text-b5',
     Password: '[aria-label="Password"]',
+    InvalidCredentialError: '.ml-3 > .sui-font-medium',
+    InvalidCredentialError2: '.mt-2',
+
+    // User Dashboard view
     Avatar: '[aria-label="User Avatar"]',
     Avatar2: '.sui-gap-2 > .sui-rounded-full',
     MyProfile: ':nth-child(2) > .sui-cursor-pointer > .sui-ml-sm',

@@ -27,6 +27,8 @@ LoginValid() {
     cy.get(ObjectElement.ContinueBTN).click();
     cy.get(ObjectElement.Password).type(this.testdata.ValidPass);
     cy.get(ObjectElement.ContinueBTN).click()
+    cy.get(ObjectElement.InvalidCredentialError).should('have.text' , this.testdata.errorMessage1); 
+    cy.get(ObjectElement.InvalidCredentialError2).should('have.text' , this.testdata.errorMessage2); 
     
   })}
 
@@ -40,6 +42,8 @@ LoginValid() {
     cy.get(ObjectElement.ContinueBTN).click()
     cy.get(ObjectElement.Password).type(this.testdata.InvalidPass);
     cy.get(ObjectElement.ContinueBTN).click()
+    cy.get(ObjectElement.InvalidCredentialError).should('have.text' , this.testdata.errorMessage1); 
+    cy.get(ObjectElement.InvalidCredentialError2).should('have.text' , this.testdata.errorMessage2); 
     
   })}
 
@@ -50,8 +54,11 @@ LoginValid() {
       this.testdata = testdata
   
     cy.get(ObjectElement.EmailField).type(this.testdata.InvalidUser);
+    cy.get(ObjectElement.ContinueBTN).click()
     cy.get(ObjectElement.Password).type(this.testdata.InvalidPass);
     cy.get(ObjectElement.ContinueBTN).click()
+    cy.get(ObjectElement.InvalidCredentialError).should('have.text' , this.testdata.errorMessage1); 
+    cy.get(ObjectElement.InvalidCredentialError2).should('have.text' , this.testdata.errorMessage2); 
     
 
   
@@ -63,13 +70,14 @@ LoginValid() {
     cy.fixture('testdata').then((testdata) => {
       this.testdata = testdata
  
-    cy.get(ObjectElement.Signin).should('exist').click();
-    cy.get(ObjectElement.LoginButton).click()
+      cy.get(ObjectElement.ContinueBTN).click()
+      cy.get(ObjectElement.EmailError).should('exist').should('be.visible')
+      cy.get(ObjectElement.EmailErrorMess).should('exist').should('be.visible').should('have.text' , this.testdata.errorMessageBlank)
     
   
   })}
 
-  HappyPathLanguage() {
+  HappyPathOtherLanguage() {
     cy.visit('https://www.telusinternational.ai/cmp/');
     cy.fixture('testdata').then((testdata) => {
       this.testdata = testdata    
