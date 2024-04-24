@@ -2,5 +2,9 @@
   "ValidUser": "danamieltala@yahoo.com.ph",
   "ValidPass": "TelusIntern1!",
   "InvalidUser": "invaliduser@gmail.com",
-  "InvalidPass": "invalid123"
+  "InvalidPass": "invalid123",
+
+  "errorMessage1": "Incorrect Credentials",
+  "errorMessage2": "The email or password you entered is incorrect, or your password may have expired. Please try again or reset your password.",
+  "errorMessageBlank": "Enter your email address"
 }

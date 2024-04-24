@@ -1,4 +1,4 @@
-import { Test } from '../support/LoginTestscript';
+import { Test } from '../support/FunctionalTestscript';
 
 let test = new Test();
 
@@ -9,12 +9,28 @@ describe('Login Scenarios', () => {
   it('HappyPath User Login', () => {
     test.LoginValid()
   })
-  it('HappyPath Update Language', () => {
-    test.HappyPathLanguage()
+  it('HappyPath Add Other Language', () => {
+    test.HappyPathOtherLanguage()
+  })
+
+  it('Invalid User Login', () => {
+    test.LoginInvalidUser()
+  })
+  
+  it('Invalid Pass Login', () => {
+    test.LoginInvalidPass()
+  })
+
+  it('Invalid All Credentials', () => {
+    test.LoginInvalidAll()
+
+  })
+
+  it('Blank Credentials', () => {
+    test.LoginBlank()
   })
 
 
-
-})
+  })
 
 
