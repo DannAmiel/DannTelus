@@ -1,6 +1,6 @@
 # Cypress Automation Tool
 
-This repository contains the Cypress automation tests for our web application. You can download it here
+This repository contains the Cypress automation tests for the web application. You can download it here
 
 ### Prerequisites
 
@@ -17,11 +17,11 @@ A step-by-step series of examples that tell you how to get a development environ
     cd your-repository-name
     ```
 
-2. **Install Cypress via npm:Run the following command in your project root directory:
+2. **Install Cypress via npm: Run the following command in your project root directory:
   ```bash
     npm install cypress --save-dev 
   ```
-3. **Open Cypress Test Runner:You can open the Cypress Test Runner with the following command:
+3. **Open Cypress Test Runner: You can open the Cypress Test Runner with the following command:
   ```bash
     npx cypress open
   ```
